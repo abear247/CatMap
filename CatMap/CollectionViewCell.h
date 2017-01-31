@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CollectionViewCell.h
 //  CatMap
 //
 //  Created by Alex Bearinger on 2017-01-31.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CatPhotoObject;
 
-@interface ViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface CollectionViewCell : UICollectionViewCell
+@property (nonatomic) CatPhotoObject *photo;
 
 
 @end
-

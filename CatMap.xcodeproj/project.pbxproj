@@ -15,6 +15,8 @@
 		C8DFC37D1E40E2BC0098BE2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DFC37B1E40E2BC0098BE2B /* LaunchScreen.storyboard */; };
 		C8DFC3881E40E2BC0098BE2B /* CatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3871E40E2BC0098BE2B /* CatMapTests.m */; };
 		C8DFC3931E40E2BC0098BE2B /* CatMapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3921E40E2BC0098BE2B /* CatMapUITests.m */; };
+		C8DFC3A21E40E3CF0098BE2B /* CatPhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */; };
+		C8DFC3A51E40E61D0098BE2B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A41E40E61D0098BE2B /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		C8DFC38E1E40E2BC0098BE2B /* CatMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DFC3921E40E2BC0098BE2B /* CatMapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatMapUITests.m; sourceTree = "<group>"; };
 		C8DFC3941E40E2BC0098BE2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8DFC3A01E40E3CF0098BE2B /* CatPhotoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatPhotoObject.h; sourceTree = "<group>"; };
+		C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatPhotoObject.m; sourceTree = "<group>"; };
+		C8DFC3A31E40E61D0098BE2B /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		C8DFC3A41E40E61D0098BE2B /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				C8DFC3711E40E2BC0098BE2B /* AppDelegate.m */,
 				C8DFC3731E40E2BC0098BE2B /* ViewController.h */,
 				C8DFC3741E40E2BC0098BE2B /* ViewController.m */,
+				C8DFC3A31E40E61D0098BE2B /* CollectionViewCell.h */,
+				C8DFC3A41E40E61D0098BE2B /* CollectionViewCell.m */,
+				C8DFC3A01E40E3CF0098BE2B /* CatPhotoObject.h */,
+				C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */,
 				C8DFC3761E40E2BC0098BE2B /* Main.storyboard */,
 				C8DFC3791E40E2BC0098BE2B /* Assets.xcassets */,
 				C8DFC37B1E40E2BC0098BE2B /* LaunchScreen.storyboard */,
@@ -273,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DFC3A21E40E3CF0098BE2B /* CatPhotoObject.m in Sources */,
+				C8DFC3A51E40E61D0098BE2B /* CollectionViewCell.m in Sources */,
 				C8DFC3751E40E2BC0098BE2B /* ViewController.m in Sources */,
 				C8DFC3721E40E2BC0098BE2B /* AppDelegate.m in Sources */,
 				C8DFC36F1E40E2BC0098BE2B /* main.m in Sources */,
