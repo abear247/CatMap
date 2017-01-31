@@ -11,7 +11,6 @@
 @interface CatPhotoObject()
 @property NSString *server;
 @property int farm;
-@property NSString *photoId;
 @property NSString *secret;
 @end
 

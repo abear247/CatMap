@@ -7,10 +7,13 @@
 //
 
 @import UIKit;
+@import MapKit;
 
-@interface CatPhotoObject : NSObject
+@interface CatPhotoObject : NSObject <MKAnnotation>
 @property UIImage *image;
 @property NSURL *url;
 @property NSDictionary *dict;
+@property NSString *photoId;
+@property(nonatomic) CLLocationCoordinate2D coordinate;
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end

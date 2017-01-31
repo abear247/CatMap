@@ -10,6 +10,7 @@
 #import "CatPhotoObject.h"
 #import "CollectionViewCell.h"
 #import "CatManager.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *tableView;
@@ -29,7 +30,7 @@
     
 }
 
-
+//-indexpathforselecteditem
 
 
 -(void) parseCats{
@@ -78,6 +79,12 @@
     cell.photo = catPhotoObject;
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    DetailViewController *dvc = (DetailViewController*)[segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    dvc.catPhotoObject = self.manager.catPhotos[indexPath.item];
 }
 
 - (void)didReceiveMemoryWarning {
