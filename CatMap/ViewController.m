@@ -33,7 +33,7 @@
 
 
 -(void) parseCats{
-    NSURL *parseURL = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=cat&has_geo"];
+    NSURL *parseURL = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=cat&has_geo=1&extras=url_m&format=json&nojsoncallback=1&tags=cat&has_geo=1"];
     
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:parseURL];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
