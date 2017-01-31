@@ -84,7 +84,7 @@
                                         <connections>
                                             <outlet property="catImageView" destination="mVD-hU-DNY" id="Luj-fL-x9W"/>
                                             <outlet property="title" destination="GFI-3s-GDo" id="IwE-ky-kz5"/>
-                                            <segue destination="96z-g7-ovh" kind="show" identifier="ShowDetail" id="Fgd-CS-wsD"/>
+                                            <segue destination="96z-g7-ovh" kind="show" identifier="DetailView" id="Fgd-CS-wsD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -102,7 +102,14 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="99q-C1-7RZ" secondAttribute="bottom" id="lae-sj-qBv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bx8-Od-M7X"/>
+                    <navigationItem key="navigationItem" id="Bx8-Od-M7X">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="u6E-SU-k4w">
+                            <connections>
+                                <action selector="searchButton:" destination="BYZ-38-t0r" id="LvM-QG-wJH"/>
+                                <segue destination="hQa-9t-dNI" kind="presentation" identifier="SearchView" id="1gd-TY-wTJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="99q-C1-7RZ" id="MwG-pw-7W6"/>
                     </connections>
@@ -110,6 +117,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="4M4-Ds-AWy">
+            <objects>
+                <viewController id="hQa-9t-dNI" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JvL-YS-UOP"/>
+                        <viewControllerLayoutGuide type="bottom" id="cX6-4Y-qOX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oOx-SD-Cir">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcI-V0-rDI">
+                                <rect key="frame" x="16" y="20" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hSE-i3-rbN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts7-Gc-ePE">
+                                <rect key="frame" x="16" y="129" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.95751700129999995" green="0.67501907279999995" blue="0.1041990998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButton:" destination="hQa-9t-dNI" eventType="touchUpInside" id="sj0-fy-FWz"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Yj-ah8">
+                                <rect key="frame" x="310" y="128" width="51" height="31"/>
+                                <connections>
+                                    <action selector="useLocation:" destination="hQa-9t-dNI" eventType="valueChanged" id="HCc-vd-lBu"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E19-d3-Ioz">
+                                <rect key="frame" x="202" y="133" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5957260835" green="1" blue="0.6831089105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ts7-Gc-ePE" firstAttribute="centerX" secondItem="oOx-SD-Cir" secondAttribute="centerX" constant="-148.5" id="5PS-Fv-9ZW"/>
+                            <constraint firstItem="PcI-V0-rDI" firstAttribute="trailing" secondItem="oOx-SD-Cir" secondAttribute="trailingMargin" id="DU5-mO-VYo"/>
+                            <constraint firstItem="Ts7-Gc-ePE" firstAttribute="top" secondItem="PcI-V0-rDI" secondAttribute="bottom" constant="9" id="Q9d-b1-0ex"/>
+                            <constraint firstItem="E19-d3-Ioz" firstAttribute="top" secondItem="PcI-V0-rDI" secondAttribute="bottom" constant="13" id="RW8-xH-3Hr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PbI-Yj-ah8" secondAttribute="trailing" id="aul-gf-B7D"/>
+                            <constraint firstItem="PbI-Yj-ah8" firstAttribute="leading" secondItem="E19-d3-Ioz" secondAttribute="trailing" constant="8" id="cNN-gt-kYn"/>
+                            <constraint firstItem="PbI-Yj-ah8" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" constant="108" id="rUe-Xd-gWF"/>
+                            <constraint firstItem="PcI-V0-rDI" firstAttribute="leading" secondItem="oOx-SD-Cir" secondAttribute="leadingMargin" id="vyy-co-di2"/>
+                            <constraint firstItem="PcI-V0-rDI" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" id="wNr-rQ-L3Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="PcI-V0-rDI" id="zuh-Bz-9Du"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yls-se-c05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896.8" y="-524.8875562218891"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="AOc-iq-RL3">

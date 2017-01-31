@@ -51,10 +51,12 @@
         self.map.region = MKCoordinateRegionMake(self.catPhotoObject.coordinate, span);
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.map addAnnotation:self.catPhotoObject];
-            self.title = self.catPhotoObject.dict[@"title"];
+            
+            
         }];
     }];
     [dataTask resume];
+    self.title = self.catPhotoObject.dict[@"title"];
 }
 
 - (void)didReceiveMemoryWarning {

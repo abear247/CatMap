@@ -11,6 +11,7 @@
 #import "CollectionViewCell.h"
 #import "CatManager.h"
 #import "DetailViewController.h"
+#import "SearchViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *tableView;
@@ -68,6 +69,7 @@
 }
 
 
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.manager.catPhotos.count;
 }
@@ -82,9 +84,15 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    DetailViewController *dvc = (DetailViewController*)[segue destinationViewController];
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    dvc.catPhotoObject = self.manager.catPhotos[indexPath.item];
+    if([segue.identifier isEqualToString:@"DetailView"]){
+        DetailViewController *dvc = (DetailViewController*)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        dvc.catPhotoObject = self.manager.catPhotos[indexPath.item];
+    }
+    if([segue.identifier isEqualToString:@"SearchView"]) {
+        SearchViewController *svc = (SearchViewController*)[segue destinationViewController];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
