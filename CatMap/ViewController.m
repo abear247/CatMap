@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import "CatPhotoObject.h"
 #import "CollectionViewCell.h"
+#import "CatManager.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *tableView;
-@property NSArray <CatPhotoObject *> *catPhotoArray;
+@property CatManager *manager;
 @end
 
 @implementation ViewController
@@ -20,8 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.manager = [CatManager new];
+    [self parseCats];
+   
     
-    NSURL *parseURL = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=cat"];
+    
+    
+}
+
+
+
+
+-(void) parseCats{
+    NSURL *parseURL = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=cat&has_geo"];
     
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:parseURL];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -46,24 +58,23 @@
             CatPhotoObject *catPhotoObject = [[CatPhotoObject alloc] initWithDict:dict];
             [temp addObject:catPhotoObject];
         }
-        self.catPhotoArray = [temp copy];
+        self.manager.catPhotos = [temp copy];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.tableView reloadData];
         }];
     }];
-    
     [dataTask resume];
 }
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.catPhotoArray.count;
+    return self.manager.catPhotos.count;
 }
 
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionViewCell *cell = (CollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    CatPhotoObject *catPhotoObject = self.catPhotoArray[indexPath.item];
+    CatPhotoObject *catPhotoObject = self.manager.catPhotos[indexPath.item];
     cell.photo = catPhotoObject;
     
     return cell;
