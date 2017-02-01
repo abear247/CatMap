@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcI-V0-rDI">
-                                <rect key="frame" x="16" y="20" width="343" height="100"/>
+                                <rect key="frame" x="16" y="57" width="343" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="hSE-i3-rbN"/>
                                 </constraints>
@@ -140,7 +140,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts7-Gc-ePE">
-                                <rect key="frame" x="16" y="129" width="46" height="30"/>
+                                <rect key="frame" x="16" y="166" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.95751700129999995" green="0.67501907279999995" blue="0.1041990998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save"/>
                                 <userDefinedRuntimeAttributes>
@@ -153,29 +153,37 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Yj-ah8">
-                                <rect key="frame" x="310" y="128" width="51" height="31"/>
+                                <rect key="frame" x="310" y="165" width="51" height="31"/>
                                 <connections>
                                     <action selector="useLocation:" destination="hQa-9t-dNI" eventType="valueChanged" id="HCc-vd-lBu"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E19-d3-Ioz">
-                                <rect key="frame" x="202" y="133" width="100" height="21"/>
+                                <rect key="frame" x="202" y="170" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter tags seperated by comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31U-RC-rBx">
+                                <rect key="frame" x="23.5" y="26" width="327.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.5957260835" green="1" blue="0.6831089105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="31U-RC-rBx" firstAttribute="centerX" secondItem="oOx-SD-Cir" secondAttribute="centerX" id="2aP-6q-8et"/>
                             <constraint firstItem="Ts7-Gc-ePE" firstAttribute="centerX" secondItem="oOx-SD-Cir" secondAttribute="centerX" constant="-148.5" id="5PS-Fv-9ZW"/>
                             <constraint firstItem="PcI-V0-rDI" firstAttribute="trailing" secondItem="oOx-SD-Cir" secondAttribute="trailingMargin" id="DU5-mO-VYo"/>
                             <constraint firstItem="Ts7-Gc-ePE" firstAttribute="top" secondItem="PcI-V0-rDI" secondAttribute="bottom" constant="9" id="Q9d-b1-0ex"/>
+                            <constraint firstItem="31U-RC-rBx" firstAttribute="centerY" secondItem="oOx-SD-Cir" secondAttribute="centerY" constant="-295" id="QUd-rF-Q1i"/>
                             <constraint firstItem="E19-d3-Ioz" firstAttribute="top" secondItem="PcI-V0-rDI" secondAttribute="bottom" constant="13" id="RW8-xH-3Hr"/>
+                            <constraint firstItem="PcI-V0-rDI" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" constant="37" id="WBf-3P-C9e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PbI-Yj-ah8" secondAttribute="trailing" id="aul-gf-B7D"/>
                             <constraint firstItem="PbI-Yj-ah8" firstAttribute="leading" secondItem="E19-d3-Ioz" secondAttribute="trailing" constant="8" id="cNN-gt-kYn"/>
-                            <constraint firstItem="PbI-Yj-ah8" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" constant="108" id="rUe-Xd-gWF"/>
+                            <constraint firstItem="PbI-Yj-ah8" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" constant="145" id="rUe-Xd-gWF"/>
                             <constraint firstItem="PcI-V0-rDI" firstAttribute="leading" secondItem="oOx-SD-Cir" secondAttribute="leadingMargin" id="vyy-co-di2"/>
-                            <constraint firstItem="PcI-V0-rDI" firstAttribute="top" secondItem="JvL-YS-UOP" secondAttribute="bottom" id="wNr-rQ-L3Q"/>
                         </constraints>
                     </view>
                     <connections>

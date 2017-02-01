@@ -11,4 +11,6 @@
 
 @interface CatManager : NSObject
 @property NSArray <CatPhotoObject*> *catPhotos;
+@property CLLocationCoordinate2D coord;
+
 @end

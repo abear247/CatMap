@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CatPhotoObject.h"
 @import CoreLocation;
+@class CatManager;
 
 @interface SearchViewController : UIViewController <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic,copy) void (^addNewTags)(NSArray<CatPhotoObject*>*cats);
+@property CatManager *catManager;
 
 @end
