@@ -103,6 +103,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bx8-Od-M7X">
+                        <barButtonItem key="leftBarButtonItem" title="Show All" id="zyz-Rw-Vhm">
+                            <connections>
+                                <segue destination="Ens-Lw-f1Q" kind="show" id="9jZ-hf-QC2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="u6E-SU-k4w">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="LvM-QG-wJH"/>
@@ -207,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lji-vf-L2f">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="64" width="343" height="559"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,6 +223,9 @@
                             <constraint firstItem="lji-vf-L2f" firstAttribute="top" secondItem="HgJ-Jq-zXH" secondAttribute="bottom" id="hLj-0X-fOM"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eRC-Iw-l16"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="map" destination="lji-vf-L2f" id="Ke6-yy-Pv2"/>
                     </connections>
@@ -225,6 +233,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZJ-My-fSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CDP-zz-q8j">
+            <objects>
+                <viewController id="Ens-Lw-f1Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Luo-ss-wJW"/>
+                        <viewControllerLayoutGuide type="bottom" id="C4m-vh-7xs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vrF-T3-oQv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-ba-pKk">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ens-Lw-f1Q" id="XDo-es-deQ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jca-ba-pKk" firstAttribute="top" secondItem="Luo-ss-wJW" secondAttribute="bottom" id="0tl-iN-QR7"/>
+                            <constraint firstItem="Jca-ba-pKk" firstAttribute="leading" secondItem="vrF-T3-oQv" secondAttribute="leadingMargin" id="6HS-un-U3N"/>
+                            <constraint firstItem="C4m-vh-7xs" firstAttribute="top" secondItem="Jca-ba-pKk" secondAttribute="bottom" id="Bdp-pW-Upx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jca-ba-pKk" secondAttribute="trailing" id="yIs-IW-OEk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M54-4X-rH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="844"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0HV-Wk-ugG">

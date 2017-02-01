@@ -25,6 +25,7 @@
         self.secret = dict[@"secret"];
         self.photoId = dict[@"id"];
         self.server = dict[@"server"];
+        _title = dict[@"title"];
         NSString *url = [NSString stringWithFormat:@"https://farm%d.staticflickr.com/%@/%@_%@.jpg",self.farm,self.server,self.photoId,self.secret];
         _url = [NSURL URLWithString:url];
         

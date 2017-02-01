@@ -14,6 +14,7 @@
 @property NSURL *url;
 @property NSDictionary *dict;
 @property NSString *photoId;
+@property (nonatomic, readonly, copy, nullable) NSString *title;
 @property(nonatomic) CLLocationCoordinate2D coordinate;
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end

@@ -22,6 +22,7 @@
 		C8DFC3AE1E4115070098BE2B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DFC3AD1E4115070098BE2B /* MapKit.framework */; };
 		C8DFC3B11E4129F70098BE2B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3B01E4129F70098BE2B /* SearchViewController.m */; };
 		C8DFC3B31E412AD30098BE2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DFC3B21E412AD30098BE2B /* CoreLocation.framework */; };
+		C8DFC3B61E4169ED0098BE2B /* ShowAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3B51E4169ED0098BE2B /* ShowAllViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		C8DFC3AF1E4129F70098BE2B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		C8DFC3B01E4129F70098BE2B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		C8DFC3B21E412AD30098BE2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8DFC3B41E4169ED0098BE2B /* ShowAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAllViewController.h; sourceTree = "<group>"; };
+		C8DFC3B51E4169ED0098BE2B /* ShowAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAllViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				C8DFC3AA1E4107630098BE2B /* DetailViewController.m */,
 				C8DFC3AF1E4129F70098BE2B /* SearchViewController.h */,
 				C8DFC3B01E4129F70098BE2B /* SearchViewController.m */,
+				C8DFC3B41E4169ED0098BE2B /* ShowAllViewController.h */,
+				C8DFC3B51E4169ED0098BE2B /* ShowAllViewController.m */,
 				C8DFC3A61E40F1EB0098BE2B /* CatManager.h */,
 				C8DFC3A71E40F1EB0098BE2B /* CatManager.m */,
 				C8DFC3A01E40E3CF0098BE2B /* CatPhotoObject.h */,
@@ -322,6 +327,7 @@
 				C8DFC36F1E40E2BC0098BE2B /* main.m in Sources */,
 				C8DFC3B11E4129F70098BE2B /* SearchViewController.m in Sources */,
 				C8DFC3AB1E4107630098BE2B /* DetailViewController.m in Sources */,
+				C8DFC3B61E4169ED0098BE2B /* ShowAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
