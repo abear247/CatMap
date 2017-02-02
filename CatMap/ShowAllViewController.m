@@ -7,8 +7,12 @@
 //
 
 #import "ShowAllViewController.h"
+#import "CatManager.h"
+#import "CatPhotoObject.h"
+@import MapKit;
 
 @interface ShowAllViewController ()
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
 
@@ -17,6 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    for(CatPhotoObject *catPhoto in self.manager.catPhotos){
+        double lat = [catPhoto.dict[@"latitude"] doubleValue];
+        double lon = [catPhoto.dict[@"longitude"] doubleValue];
+        catPhoto.coordinate = CLLocationCoordinate2DMake(lat, lon);
+        [self.map addAnnotation:catPhoto];
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

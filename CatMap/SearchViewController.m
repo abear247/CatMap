@@ -65,10 +65,10 @@
     NSURL *parseURL;
     if(self.useUserLocation){
         NSString *extraURL = [NSString stringWithFormat:@"lat=%f&lon=%f&radius=20",self.catManager.coord.latitude,self.catManager.coord.longitude];
-        parseURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=%@&has_geo=1&extras=url_m&format=json&nojsoncallback=1&%@",self.textField.text,extraURL]];
+        parseURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=%@&lat=1&lon=1&has_geo=1&extras=url_m&format=json&nojsoncallback=1&extras=geo&%@",self.textField.text,extraURL]];
     }
     else{
-        parseURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=%@&has_geo=1&extras=url_m&format=json&nojsoncallback=1",self.textField.text]];
+        parseURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4d68041ce8ab964d485a8a6cb1f28da8&tags=%@&has_geo=1&extras=url_m&format=json&nojsoncallback=1&extras=geo",self.textField.text]];
     }
     NSLog(@"%@",parseURL);
     

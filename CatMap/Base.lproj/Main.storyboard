@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" id="Bx8-Od-M7X">
                         <barButtonItem key="leftBarButtonItem" title="Show All" id="zyz-Rw-Vhm">
                             <connections>
-                                <segue destination="Ens-Lw-f1Q" kind="show" id="9jZ-hf-QC2"/>
+                                <segue destination="Ens-Lw-f1Q" kind="show" identifier="ShowAllView" id="9jZ-hf-QC2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="u6E-SU-k4w">
@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="1887" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Show All View Controller-->
         <scene sceneID="CDP-zz-q8j">
             <objects>
-                <viewController id="Ens-Lw-f1Q" sceneMemberID="viewController">
+                <viewController id="Ens-Lw-f1Q" customClass="ShowAllViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Luo-ss-wJW"/>
                         <viewControllerLayoutGuide type="bottom" id="C4m-vh-7xs"/>
@@ -261,6 +261,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Jca-ba-pKk" secondAttribute="trailing" id="yIs-IW-OEk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="Jca-ba-pKk" id="Dn2-a3-AqE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M54-4X-rH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

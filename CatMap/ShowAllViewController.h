@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
+@class CatManager;
 
-@interface ShowAllViewController : UIViewController
-
+@interface ShowAllViewController : UIViewController <MKMapViewDelegate>
+@property (nonatomic) CatManager *manager;
 @end

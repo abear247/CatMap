@@ -56,7 +56,6 @@
         }];
     }];
     [dataTask resume];
- //   self.title = self.catPhotoObject.dict[@"title"];
 }
 
 - (void)didReceiveMemoryWarning {

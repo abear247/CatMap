@@ -12,6 +12,7 @@
 #import "CatManager.h"
 #import "DetailViewController.h"
 #import "SearchViewController.h"
+#import "ShowAllViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *tableView;
@@ -57,6 +58,10 @@
         };
         [svc addNewTags];
         
+    }
+    if([segue.identifier isEqualToString:@"ShowAllView"]){
+        ShowAllViewController *savc = (ShowAllViewController*)[segue destinationViewController];
+        savc.manager = self.manager;
     }
 }
 
