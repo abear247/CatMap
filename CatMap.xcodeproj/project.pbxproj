@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84DD6A91E44F70000591C75 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C84DD6A71E44F70000591C75 /* Model.xcdatamodeld */; };
+		C84DD6AF1E45018D00591C75 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C84DD6AD1E45018D00591C75 /* Photo+CoreDataProperties.m */; };
 		C8DFC36F1E40E2BC0098BE2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC36E1E40E2BC0098BE2B /* main.m */; };
 		C8DFC3721E40E2BC0098BE2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3711E40E2BC0098BE2B /* AppDelegate.m */; };
 		C8DFC3751E40E2BC0098BE2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3741E40E2BC0098BE2B /* ViewController.m */; };
@@ -17,7 +19,7 @@
 		C8DFC3931E40E2BC0098BE2B /* CatMapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3921E40E2BC0098BE2B /* CatMapUITests.m */; };
 		C8DFC3A21E40E3CF0098BE2B /* CatPhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */; };
 		C8DFC3A51E40E61D0098BE2B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A41E40E61D0098BE2B /* CollectionViewCell.m */; };
-		C8DFC3A81E40F1EB0098BE2B /* CatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A71E40F1EB0098BE2B /* CatManager.m */; };
+		C8DFC3A81E40F1EB0098BE2B /* PhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3A71E40F1EB0098BE2B /* PhotoManager.m */; };
 		C8DFC3AB1E4107630098BE2B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3AA1E4107630098BE2B /* DetailViewController.m */; };
 		C8DFC3AE1E4115070098BE2B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DFC3AD1E4115070098BE2B /* MapKit.framework */; };
 		C8DFC3B11E4129F70098BE2B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFC3B01E4129F70098BE2B /* SearchViewController.m */; };
@@ -43,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C84DD6A81E44F70000591C75 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C84DD6AA1E45018D00591C75 /* Photo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataClass.h"; sourceTree = "<group>"; };
+		C84DD6AB1E45018D00591C75 /* Photo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataClass.m"; sourceTree = "<group>"; };
+		C84DD6AC1E45018D00591C75 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C84DD6AD1E45018D00591C75 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C8DFC36A1E40E2BC0098BE2B /* CatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DFC36E1E40E2BC0098BE2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8DFC3701E40E2BC0098BE2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,8 +70,8 @@
 		C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatPhotoObject.m; sourceTree = "<group>"; };
 		C8DFC3A31E40E61D0098BE2B /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		C8DFC3A41E40E61D0098BE2B /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		C8DFC3A61E40F1EB0098BE2B /* CatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatManager.h; sourceTree = "<group>"; };
-		C8DFC3A71E40F1EB0098BE2B /* CatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatManager.m; sourceTree = "<group>"; };
+		C8DFC3A61E40F1EB0098BE2B /* PhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManager.h; sourceTree = "<group>"; };
+		C8DFC3A71E40F1EB0098BE2B /* PhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManager.m; sourceTree = "<group>"; };
 		C8DFC3A91E4107630098BE2B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C8DFC3AA1E4107630098BE2B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C8DFC3AD1E4115070098BE2B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +112,10 @@
 		C8DFC3611E40E2BC0098BE2B = {
 			isa = PBXGroup;
 			children = (
+				C84DD6AA1E45018D00591C75 /* Photo+CoreDataClass.h */,
+				C84DD6AB1E45018D00591C75 /* Photo+CoreDataClass.m */,
+				C84DD6AC1E45018D00591C75 /* Photo+CoreDataProperties.h */,
+				C84DD6AD1E45018D00591C75 /* Photo+CoreDataProperties.m */,
 				C8DFC36C1E40E2BC0098BE2B /* CatMap */,
 				C8DFC3861E40E2BC0098BE2B /* CatMapTests */,
 				C8DFC3911E40E2BC0098BE2B /* CatMapUITests */,
@@ -138,8 +149,8 @@
 				C8DFC3B01E4129F70098BE2B /* SearchViewController.m */,
 				C8DFC3B41E4169ED0098BE2B /* ShowAllViewController.h */,
 				C8DFC3B51E4169ED0098BE2B /* ShowAllViewController.m */,
-				C8DFC3A61E40F1EB0098BE2B /* CatManager.h */,
-				C8DFC3A71E40F1EB0098BE2B /* CatManager.m */,
+				C8DFC3A61E40F1EB0098BE2B /* PhotoManager.h */,
+				C8DFC3A71E40F1EB0098BE2B /* PhotoManager.m */,
 				C8DFC3A01E40E3CF0098BE2B /* CatPhotoObject.h */,
 				C8DFC3A11E40E3CF0098BE2B /* CatPhotoObject.m */,
 				C8DFC3761E40E2BC0098BE2B /* Main.storyboard */,
@@ -147,6 +158,7 @@
 				C8DFC37B1E40E2BC0098BE2B /* LaunchScreen.storyboard */,
 				C8DFC37E1E40E2BC0098BE2B /* Info.plist */,
 				C8DFC36D1E40E2BC0098BE2B /* Supporting Files */,
+				C84DD6A71E44F70000591C75 /* Model.xcdatamodeld */,
 			);
 			path = CatMap;
 			sourceTree = "<group>";
@@ -319,13 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8DFC3A81E40F1EB0098BE2B /* CatManager.m in Sources */,
+				C8DFC3A81E40F1EB0098BE2B /* PhotoManager.m in Sources */,
 				C8DFC3A21E40E3CF0098BE2B /* CatPhotoObject.m in Sources */,
 				C8DFC3A51E40E61D0098BE2B /* CollectionViewCell.m in Sources */,
 				C8DFC3751E40E2BC0098BE2B /* ViewController.m in Sources */,
 				C8DFC3721E40E2BC0098BE2B /* AppDelegate.m in Sources */,
+				C84DD6AF1E45018D00591C75 /* Photo+CoreDataProperties.m in Sources */,
 				C8DFC36F1E40E2BC0098BE2B /* main.m in Sources */,
 				C8DFC3B11E4129F70098BE2B /* SearchViewController.m in Sources */,
+				C84DD6A91E44F70000591C75 /* Model.xcdatamodeld in Sources */,
 				C8DFC3AB1E4107630098BE2B /* DetailViewController.m in Sources */,
 				C8DFC3B61E4169ED0098BE2B /* ShowAllViewController.m in Sources */,
 			);
@@ -559,6 +573,7 @@
 				C8DFC3991E40E2BC0098BE2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8DFC39A1E40E2BC0098BE2B /* Build configuration list for PBXNativeTarget "CatMapTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +582,7 @@
 				C8DFC39C1E40E2BC0098BE2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8DFC39D1E40E2BC0098BE2B /* Build configuration list for PBXNativeTarget "CatMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -575,8 +591,22 @@
 				C8DFC39F1E40E2BC0098BE2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C84DD6A71E44F70000591C75 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C84DD6A81E44F70000591C75 /* Model.xcdatamodel */,
+			);
+			currentVersion = C84DD6A81E44F70000591C75 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C8DFC3621E40E2BC0098BE2B /* Project object */;
 }

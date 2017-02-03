@@ -7,7 +7,7 @@
 //
 
 #import "ShowAllViewController.h"
-#import "CatManager.h"
+#import "PhotoManager.h"
 #import "CatPhotoObject.h"
 @import MapKit;
 
@@ -26,6 +26,7 @@
         double lon = [catPhoto.dict[@"longitude"] doubleValue];
         catPhoto.coordinate = CLLocationCoordinate2DMake(lat, lon);
         [self.map addAnnotation:catPhoto];
+        
         
     }
     

@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @import MapKit;
-@class CatManager;
+@class PhotoManager;
 
 @interface ShowAllViewController : UIViewController <MKMapViewDelegate>
-@property (nonatomic) CatManager *manager;
+@property (nonatomic) PhotoManager *manager;
 @end

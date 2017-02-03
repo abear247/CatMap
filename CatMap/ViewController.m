@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CatPhotoObject.h"
 #import "CollectionViewCell.h"
-#import "CatManager.h"
+#import "PhotoManager.h"
 #import "DetailViewController.h"
 #import "SearchViewController.h"
 #import "ShowAllViewController.h"
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.manager = [CatManager new];
+    self.manager = [PhotoManager new];
     [self performSegueWithIdentifier:@"SearchView" sender:self];
 }
 
